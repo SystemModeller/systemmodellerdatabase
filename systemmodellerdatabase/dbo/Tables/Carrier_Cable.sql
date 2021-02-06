@@ -1,9 +1,9 @@
-﻿CREATE TABLE [dbo].[Carrier_Cable] (
-    [Cable_ID]           INT            IDENTITY (1, 1) NOT NULL,
-    [Cable_Type]         INT            NULL,
-    [Cable_Device_Start] INT            NULL,
-    [Cable_Device_End]   INT            NULL,
-    [Cable_Description]  NVARCHAR (50)  NULL,
-    [Cable_Notes]        NVARCHAR (MAX) NULL
-);
+﻿CREATE TABLE [dbo].[Carrier_Cable](
+	[Cable_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Cable_Type] [int] NULL,
+	[Cable_Device_Start] [int] NULL,
+	[Cable_Device_End] [int] NULL,
+	[Cable_Description] [nvarchar](50) NULL,
+	[Cable_Notes] [nvarchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 

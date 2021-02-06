@@ -1,6 +1,4 @@
-﻿
-
--- =============================================
+﻿-- =============================================
 -- Author:		MG System Modeller
 -- Create date: 14/07/2018
 -- Description:	Pressure band / entropy selection

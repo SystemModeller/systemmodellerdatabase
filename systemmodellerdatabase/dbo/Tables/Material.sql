@@ -1,6 +1,10 @@
-﻿CREATE TABLE [dbo].[Material] (
-    [Material_ID]   INT           IDENTITY (1, 1) NOT NULL,
-    [Material_Name] NVARCHAR (50) NULL,
-    [Material_Spec] NVARCHAR (50) NULL
-);
+﻿CREATE TABLE [dbo].[Material](
+	[Material_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Material_Name] [nvarchar](50) NULL,
+	[Material_Spec] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Material] PRIMARY KEY CLUSTERED 
+(
+	[Material_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
 
