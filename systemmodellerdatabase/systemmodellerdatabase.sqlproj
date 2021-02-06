@@ -118,126 +118,55 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="dbo\" />
+    <Folder Include="Scripts\" />
     <Folder Include="dbo\Tables\" />
     <Folder Include="Security\" />
     <Folder Include="dbo\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tables\Carrier_Pipeline.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Carrier_Conveyor.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Device_LookUp.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Device_Connections.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Carrier_Cable_Version.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Device.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\ProcessStream.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Process.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Carrier_Container_Version.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Carrier_Cable.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Carrier_Cable_Version_Structure.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Device_Group.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Control_Outputs.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Control_Outputs_Type.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Location_Position.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Material.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Location_Site.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Device_PLC_Type.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Steam_Temp_Pressure.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Document.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Document_Version.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Carrier_Pipeline_Version.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Carrier_Type.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
+    <None Include="Scripts\ScriptsIgnoredOnImport.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Carrier_Cable.sql" />
+    <Build Include="dbo\Tables\Carrier_Cable_Version.sql" />
+    <Build Include="dbo\Tables\Carrier_Cable_Version_Structure.sql" />
+    <Build Include="dbo\Tables\Carrier_Container_Version.sql" />
+    <Build Include="dbo\Tables\Carrier_Conveyor.sql" />
+    <Build Include="dbo\Tables\Carrier_Pipeline.sql" />
+    <Build Include="dbo\Tables\Carrier_Pipeline_Version.sql" />
+    <Build Include="dbo\Tables\Carrier_Type.sql" />
+    <Build Include="dbo\Tables\Control_Outputs.sql" />
+    <Build Include="dbo\Tables\Control_Outputs_Type.sql" />
+    <Build Include="dbo\Tables\Device.sql" />
+    <Build Include="dbo\Tables\Device_Connections.sql" />
+    <Build Include="dbo\Tables\Document.sql" />
+    <Build Include="dbo\Tables\Document_Store.sql" />
+    <Build Include="dbo\Tables\Document_Version.sql" />
+    <Build Include="dbo\Tables\Library_Author.sql" />
+    <Build Include="dbo\Tables\Library_LookUp.sql" />
+    <Build Include="dbo\Tables\Location_Position.sql" />
+    <Build Include="dbo\Tables\Location_Site.sql" />
+    <Build Include="dbo\Tables\Material.sql" />
+    <Build Include="dbo\Tables\Part.sql" />
+    <Build Include="dbo\Tables\Part_Connection_LookUP.sql" />
+    <Build Include="dbo\Tables\Part_Group.sql" />
+    <Build Include="dbo\Tables\Part_LookUp.sql" />
+    <Build Include="dbo\Tables\Part_PLC_Type.sql" />
+    <Build Include="dbo\Tables\Process.sql" />
+    <Build Include="dbo\Tables\ProcessStream.sql" />
+    <Build Include="dbo\Tables\Security_Group.sql" />
+    <Build Include="dbo\Tables\Security_Resource_Lookup.sql" />
+    <Build Include="dbo\Tables\Steam_Temp_Pressure.sql" />
+    <Build Include="dbo\Tables\User_Details.sql" />
+    <Build Include="dbo\Tables\Version.sql" />
     <Build Include="Security\systemmodellerDB.sql" />
-    <Build Include="Security\systemmodellerDB_1.sql" />
     <Build Include="Security\RoleMemberships.sql" />
-    <Build Include="dbo\Stored Procedures\Steam_Entropy_MPa_Band.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Stored Procedures\Steam_Entropy_MPa_Band_bracket.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Stored Procedures\Steam_Temp_Band.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Stored Procedures\Steam_Temp_MPa_Band.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Stored Procedures\Steam_Temp_MPa_Band_bracket.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="Security\Permissions.sql" />
+    <Build Include="dbo\Stored Procedures\select_devices_by_group.sql" />
+    <Build Include="dbo\Stored Procedures\selectDevices.sql" />
+    <Build Include="dbo\Stored Procedures\Steam_Entropy_MPa_Band.sql" />
+    <Build Include="dbo\Stored Procedures\Steam_Entropy_MPa_Band_bracket.sql" />
+    <Build Include="dbo\Stored Procedures\Steam_Temp_Band.sql" />
+    <Build Include="dbo\Stored Procedures\Steam_Temp_MPa_Band.sql" />
+    <Build Include="dbo\Stored Procedures\Steam_Temp_MPa_Band_bracket.sql" />
   </ItemGroup>
 </Project>

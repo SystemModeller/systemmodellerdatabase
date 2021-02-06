@@ -13,7 +13,5 @@
 	[Dewwy_Sub_Class] [int] NULL,
 	[Document_Drawing_Number] [nvarchar](50) NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-
-
 GO
 ALTER TABLE [dbo].[Document] ADD  CONSTRAINT [DF_Document_Document_Archived]  DEFAULT ((1)) FOR [Document_Archived]

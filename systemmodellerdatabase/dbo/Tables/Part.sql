@@ -12,6 +12,7 @@
 	[Part_Barcode] [nvarchar](max) NULL,
 	[Part_Condition] [bit] NULL,
 	[Part_Discontinued] [bit] NULL,
+	[Part_Template] [bit] NULL,
  CONSTRAINT [PK_Part] PRIMARY KEY CLUSTERED 
 (
 	[Part_ID] ASC
@@ -23,3 +24,11 @@ REFERENCES [dbo].[Version] ([Version_ID])
 GO
 
 ALTER TABLE [dbo].[Part] CHECK CONSTRAINT [FK_Part_Version]
+GO
+ALTER TABLE [dbo].[Part] ADD  CONSTRAINT [DF_Part_Part_Condition]  DEFAULT ((0)) FOR [Part_Condition]
+GO
+ALTER TABLE [dbo].[Part] ADD  CONSTRAINT [DF_Part_Part_Discontinued]  DEFAULT ((0)) FOR [Part_Discontinued]
+GO
+ALTER TABLE [dbo].[Part] ADD  CONSTRAINT [DF_Part_Part_Template]  DEFAULT ((0)) FOR [Part_Template]
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'If the part is a template, then it means other parts can be created from it. For example an M6 bolt ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Part', @level2type=N'COLUMN',@level2name=N'Part_Template'

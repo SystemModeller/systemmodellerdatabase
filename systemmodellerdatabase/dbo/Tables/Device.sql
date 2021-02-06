@@ -16,4 +16,3 @@
 	[Device_Power_Siemen] [int] NULL,
 	[Device_Power_Polarity] [int] NULL
 ) ON [PRIMARY]
-

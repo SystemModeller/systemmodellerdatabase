@@ -3,4 +3,3 @@
 	[Structure_Name] [nvarchar](50) NULL,
 	[Structure_Description] [nvarchar](max) NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-

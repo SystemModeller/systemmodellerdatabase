@@ -7,4 +7,3 @@
 	[S_kJ_kg] [decimal](18, 4) NULL,
 	[Data_Type] [int] NULL
 ) ON [PRIMARY]
-

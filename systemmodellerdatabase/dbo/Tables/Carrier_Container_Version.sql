@@ -8,4 +8,3 @@
 	[Container_Volume_MM3] [int] NULL,
 	[Container_Weight] [decimal](18, 0) NOT NULL
 ) ON [PRIMARY]
-

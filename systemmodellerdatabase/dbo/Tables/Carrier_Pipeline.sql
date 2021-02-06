@@ -6,7 +6,5 @@
 	[Pipe_Description] [nvarchar](max) NULL,
 	[Pipe_Active] [bit] NOT NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-
-
 GO
 ALTER TABLE [dbo].[Carrier_Pipeline] ADD  CONSTRAINT [DF_Pipe_Details_Pipe_Active]  DEFAULT ((0)) FOR [Pipe_Active]

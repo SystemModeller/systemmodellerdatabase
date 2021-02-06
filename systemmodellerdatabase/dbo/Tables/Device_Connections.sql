@@ -5,4 +5,3 @@
 	[Connection_Transport_ID] [int] NULL,
 	[Connection_Velocity_MMS] [int] NULL
 ) ON [PRIMARY]
-

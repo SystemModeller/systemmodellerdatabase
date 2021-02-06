@@ -12,3 +12,5 @@
 	[LookUp_Display_Z_Ref] [int] NULL,
 	[LookUp_Active] [bit] NOT NULL
 ) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Part_LookUp] ADD  CONSTRAINT [DF_Device_LookUp_LookUp_Active]  DEFAULT ((0)) FOR [LookUp_Active]

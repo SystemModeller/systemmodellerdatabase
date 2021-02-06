@@ -6,4 +6,3 @@
 	[Cable_Description] [nvarchar](50) NULL,
 	[Cable_Notes] [nvarchar](max) NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-

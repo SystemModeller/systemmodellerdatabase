@@ -6,7 +6,5 @@
 	[Conveyor_Description] [nvarchar](max) NULL,
 	[Conveyor_Active] [bit] NOT NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-
-
 GO
 ALTER TABLE [dbo].[Carrier_Conveyor] ADD  CONSTRAINT [DF_Conveyor_Details_Conveyor_Active]  DEFAULT ((0)) FOR [Conveyor_Active]

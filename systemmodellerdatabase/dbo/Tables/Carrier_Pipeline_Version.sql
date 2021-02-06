@@ -9,4 +9,3 @@
 	[Pipe_Version_Temperature_K] [int] NULL,
 	[Pipe_Version_Plant_System_ID] [nchar](10) NULL
 ) ON [PRIMARY]
-

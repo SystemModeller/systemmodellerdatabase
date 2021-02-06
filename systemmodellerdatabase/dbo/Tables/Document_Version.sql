@@ -4,4 +4,3 @@
 	[Version_Created_Date] [datetime] NULL,
 	[Version_Text_1] [nvarchar](max) NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-

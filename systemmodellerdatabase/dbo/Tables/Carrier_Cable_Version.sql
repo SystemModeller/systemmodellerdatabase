@@ -4,4 +4,3 @@
 	[Type_Voltage] [nchar](10) NULL,
 	[Type_Core] [int] NULL
 ) ON [PRIMARY]
-

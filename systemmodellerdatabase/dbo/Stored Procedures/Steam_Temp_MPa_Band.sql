@@ -30,5 +30,3 @@ BEGIN
 			Temp_K 
 		ASC
 END
-
-

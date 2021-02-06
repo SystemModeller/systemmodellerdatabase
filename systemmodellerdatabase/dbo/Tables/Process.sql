@@ -8,4 +8,3 @@
 	[Process_Timer] [int] NULL,
 	[Process_lastRun] [datetime] NULL
 ) ON [PRIMARY]
-

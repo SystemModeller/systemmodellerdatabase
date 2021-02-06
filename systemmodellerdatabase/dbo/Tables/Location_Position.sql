@@ -18,7 +18,5 @@
 	[Location_UTM_Part_3] [nchar](10) NULL,
 	[Location_Active] [bit] NOT NULL
 ) ON [PRIMARY]
-
-
 GO
 ALTER TABLE [dbo].[Location_Position] ADD  CONSTRAINT [DF_Location_Position_Location_Active]  DEFAULT ((0)) FOR [Location_Active]

@@ -4,4 +4,3 @@
 	[Site_Grid_Ref] [nvarchar](50) NULL,
 	[Site_Location_ID] [int] NULL
 ) ON [PRIMARY]
-
