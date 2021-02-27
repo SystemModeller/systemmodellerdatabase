@@ -161,16 +161,17 @@
     <Build Include="dbo\Tables\Version.sql" />
     <Build Include="Security\systemmodellerDB.sql" />
     <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Stored Procedures\select_devices_by_group.sql" />
+    <Build Include="dbo\Stored Procedures\selectDevices.sql" />
     <Build Include="dbo\Stored Procedures\Steam_Entropy_MPa_Band.sql" />
     <Build Include="dbo\Stored Procedures\Steam_Entropy_MPa_Band_bracket.sql" />
     <Build Include="dbo\Stored Procedures\Steam_Temp_Band.sql" />
     <Build Include="dbo\Stored Procedures\Steam_Temp_MPa_Band.sql" />
     <Build Include="dbo\Stored Procedures\Steam_Temp_MPa_Band_bracket.sql" />
     <Build Include="dbo\Tables\Part_Group_LookUP.sql" />
+    <Build Include="dbo\Stored Procedures\smapi_Insert_new_Part.sql" />
+    <Build Include="dbo\Stored Procedures\smapi_Select_Devices.sql" />
+    <Build Include="dbo\Stored Procedures\smapi_Select_devices_by_group.sql" />
     <Build Include="dbo\Stored Procedures\smapi_Select_parts_order_by_version.sql" />
-    <Build Include="dbo\Stored Procedures\smapi_Insert_Part_Version_new_Part.sql" />
-    <Build Include="dbo\Stored Procedures\smapi_Select_Part_All_parts.sql" />
-    <Build Include="dbo\Stored Procedures\smapi_Select_Part_Group_Parts_by_group.sql" />
-    <Build Include="dbo\Stored Procedures\smapi_Select_Part_parts_order_by_version.sql" />
   </ItemGroup>
 </Project>
