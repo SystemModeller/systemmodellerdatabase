@@ -12,10 +12,11 @@
 	[Version_Build_No] [int] NULL,
 	[Version_Revision_no] [int] NULL,
 	[Version_Lot_No] [nvarchar](50) NULL,
-	[Version_Manufacturers_ID] [nvarchar](50) NULL,
-	[Version_Manufactuers_Production_ID] [nvarchar](50) NOT NULL,
-	[Version_Vendor_ID] [nchar](10) NULL,
-	[Version_Vendor_Part_ID] [nchar](10) NULL,
+	[Version_Manufacturers_ID] [int] NULL,
+	[Version_Manufacturers_ID_Code] [nvarchar](255) NULL,
+	[Version_Manufactuers_Production_ID_Code] [nvarchar](255) NULL,
+	[Version_Vendor_ID] [int] NULL,
+	[Version_Vendor_Part_ID_Code] [nchar](255) NULL,
 	[Version_Increment_ID] [int] NULL,
 	[Version_Price] [decimal](18, 0) NULL,
 	[Version_Tax_Code] [int] NULL,
@@ -53,6 +54,9 @@ GO
 
 ALTER TABLE [dbo].[Version] CHECK CONSTRAINT [FK_Version_Part]
 GO
+
+
+GO
 ALTER TABLE [dbo].[Version] ADD  CONSTRAINT [DF_Version_Version_Discontined]  DEFAULT ((0)) FOR [Version_Discontined]
 GO
 ALTER TABLE [dbo].[Version] ADD  CONSTRAINT [DF_Version_Version_Archived]  DEFAULT ((1)) FOR [Version_Archived]
@@ -78,3 +82,5 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The tax code operating under for this part' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Version', @level2type=N'COLUMN',@level2name=N'Version_Tax_Code'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'this is the location position of the parts storeage.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Version', @level2type=N'COLUMN',@level2name=N'Version_Warehouse_Location_Position_ID'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Thus is the part number given by the manufactuer ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Version', @level2type=N'COLUMN',@level2name=N'Version_Manufactuers_Production_ID_Code'
