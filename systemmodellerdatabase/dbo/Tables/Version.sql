@@ -57,6 +57,9 @@ GO
 
 
 GO
+
+
+GO
 ALTER TABLE [dbo].[Version] ADD  CONSTRAINT [DF_Version_Version_Discontined]  DEFAULT ((0)) FOR [Version_Discontined]
 GO
 ALTER TABLE [dbo].[Version] ADD  CONSTRAINT [DF_Version_Version_Archived]  DEFAULT ((1)) FOR [Version_Archived]

@@ -14,7 +14,7 @@
 --				
 -- =============================================
 
-CREATE PROCEDURE [dbo].[smapi_Insert_new_Part]
+CREATE PROCEDURE [dbo].[smapi_Insert_Part_Version_new_Part]
 		@Prt_Inventory_ID AS nvarchar(50),
 		@Prt_Part_Code AS nvarchar(50),
 		@Prt_Part_Name AS nvarchar(50),
