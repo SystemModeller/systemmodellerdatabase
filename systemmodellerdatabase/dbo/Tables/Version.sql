@@ -3,7 +3,7 @@
 	[Version_Parent_ID] [int] NOT NULL,
 	[Version_Date] [datetime2](7) NULL,
 	[Version_Added_User_ID] [int] NULL,
-	[Version_Edited_User_ID] [nchar](10) NULL,
+	[Version_Edited_User_ID] [int] NULL,
 	[Version_Edited_Date] [datetime2](7) NOT NULL,
 	[Version_Effective_Date] [datetime2](7) NULL,
 	[Version_Material_ID] [int] NULL,
@@ -53,6 +53,9 @@ REFERENCES [dbo].[Part] ([Part_ID])
 GO
 
 ALTER TABLE [dbo].[Version] CHECK CONSTRAINT [FK_Version_Part]
+GO
+
+
 GO
 
 

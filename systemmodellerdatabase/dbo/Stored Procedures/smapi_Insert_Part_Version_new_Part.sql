@@ -18,7 +18,8 @@ CREATE PROCEDURE [dbo].[smapi_Insert_Part_Version_new_Part]
 		@Prt_Inventory_ID AS nvarchar(50),
 		@Prt_Part_Code AS nvarchar(50),
 		@Prt_Part_Name AS nvarchar(50),
-		@Ver_Manuf_ID_Code AS nvarchar(255)
+		@Ver_Manuf_ID_Code AS nvarchar(255),
+		@Ver_Added_User_ID AS int
 AS
 BEGIN TRY  
 	SET NOCOUNT ON;
@@ -35,11 +36,13 @@ BEGIN TRY
 	INSERT INTO Version 
 		(Version_Parent_ID, 
 		Version_Date,
+		Version_Added_User_ID,
 		Version_Manufacturers_ID_Code, 
 		Version_Edited_Date)
 	VALUES
 		(@partID, 
 		CURRENT_TIMESTAMP,
+		@Ver_Added_User_ID,
 		@Ver_Manuf_ID_Code, 
 		CURRENT_TIMESTAMP)
 

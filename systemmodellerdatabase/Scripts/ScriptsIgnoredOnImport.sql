@@ -3317,3 +3317,417 @@ GO
 
 ALTER DATABASE [systemmodeller] SET  READ_WRITE
 GO
+
+USE [master]
+GO
+
+/****** Object:  Database [systemmodeller]    Script Date: 27/02/2021 22:03:19 ******/
+CREATE DATABASE [systemmodeller]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'systemmodeller', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\systemmodeller.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'systemmodeller_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\systemmodeller_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT
+GO
+
+ALTER DATABASE [systemmodeller] SET COMPATIBILITY_LEVEL = 130
+GO
+
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [systemmodeller].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+
+ALTER DATABASE [systemmodeller] SET ANSI_NULL_DEFAULT OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET ANSI_NULLS OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET ANSI_PADDING OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET ANSI_WARNINGS OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET ARITHABORT OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET AUTO_CLOSE OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET AUTO_SHRINK OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET AUTO_UPDATE_STATISTICS ON
+GO
+
+ALTER DATABASE [systemmodeller] SET CURSOR_CLOSE_ON_COMMIT OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET CURSOR_DEFAULT  GLOBAL
+GO
+
+ALTER DATABASE [systemmodeller] SET CONCAT_NULL_YIELDS_NULL OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET NUMERIC_ROUNDABORT OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET QUOTED_IDENTIFIER OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET RECURSIVE_TRIGGERS OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET  DISABLE_BROKER
+GO
+
+ALTER DATABASE [systemmodeller] SET AUTO_UPDATE_STATISTICS_ASYNC OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET DATE_CORRELATION_OPTIMIZATION OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET TRUSTWORTHY OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET ALLOW_SNAPSHOT_ISOLATION OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET PARAMETERIZATION SIMPLE
+GO
+
+ALTER DATABASE [systemmodeller] SET READ_COMMITTED_SNAPSHOT OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET HONOR_BROKER_PRIORITY OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET RECOVERY SIMPLE
+GO
+
+ALTER DATABASE [systemmodeller] SET  MULTI_USER
+GO
+
+ALTER DATABASE [systemmodeller] SET PAGE_VERIFY CHECKSUM
+GO
+
+ALTER DATABASE [systemmodeller] SET DB_CHAINING OFF
+GO
+
+ALTER DATABASE [systemmodeller] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF )
+GO
+
+ALTER DATABASE [systemmodeller] SET TARGET_RECOVERY_TIME = 60 SECONDS
+GO
+
+ALTER DATABASE [systemmodeller] SET DELAYED_DURABILITY = DISABLED
+GO
+
+ALTER DATABASE [systemmodeller] SET ACCELERATED_DATABASE_RECOVERY = OFF
+GO
+
+EXEC sys.sp_db_vardecimal_storage_format N'systemmodeller', N'ON'
+GO
+
+ALTER DATABASE [systemmodeller] SET QUERY_STORE = OFF
+GO
+
+USE [systemmodeller]
+GO
+
+/****** Object:  Table [dbo].[Carrier_Cable]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Carrier_Cable_Version]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Carrier_Cable_Version_Structure]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Carrier_Container_Version]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Carrier_Conveyor]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Carrier_Pipeline]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Carrier_Pipeline_Version]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Carrier_Type]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Control_Outputs]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Control_Outputs_Type]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Device]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Document]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Document_Store]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Document_Version]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Library_Author]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Library_LookUp]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Location_Position]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Location_Site]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Material]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Part]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Part_Connection_LookUP]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Part_Group]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Part_Group_LookUP]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Part_LookUp]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Part_PLC_Type]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Process]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[ProcessStream]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Security_Group]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Security_Resource_Lookup]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Steam_Temp_Pressure]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[User_Details]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  Table [dbo].[Version]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  StoredProcedure [dbo].[smapi_Insert_Part_Version_new_Part]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  StoredProcedure [dbo].[smapi_Select_Part_All_parts]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  StoredProcedure [dbo].[smapi_Select_Part_Group_Parts_by_group]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  StoredProcedure [dbo].[smapi_Select_Part_parts_order_by_version]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  StoredProcedure [dbo].[Steam_Entropy_MPa_Band]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  StoredProcedure [dbo].[Steam_Entropy_MPa_Band_bracket]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  StoredProcedure [dbo].[Steam_Temp_Band]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  StoredProcedure [dbo].[Steam_Temp_MPa_Band]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Object:  StoredProcedure [dbo].[Steam_Temp_MPa_Band_bracket]    Script Date: 27/02/2021 22:03:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+USE [master]
+GO
+
+ALTER DATABASE [systemmodeller] SET  READ_WRITE
+GO
