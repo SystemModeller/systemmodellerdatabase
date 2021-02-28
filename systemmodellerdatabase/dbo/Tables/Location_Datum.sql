@@ -2,6 +2,7 @@
 	[Location_Datum_ID] [int] IDENTITY(1,1) NOT NULL,
 	[Location_Datum_Name] [nvarchar](50) NULL,
 	[Location_Datum_Grid_Ref] [nvarchar](50) NULL,
+	[Location_Datum_Parent_ID] [int] NULL,
 	[Location_Datum_Site_ID] [int] NULL,
 	[Location_Datum_X_Ref] [int] NULL,
 	[Location_Datum_Y_Ref] [int] NULL,

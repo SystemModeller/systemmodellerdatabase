@@ -32,6 +32,9 @@ GO
 
 
 GO
+
+
+GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'This is the Security Group that can access the Resource item (which could be documents / inages etc)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Security_Resource_Lookup', @level2type=N'COLUMN',@level2name=N'Security_Resource_Group_ID'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'This is the ID of the document or image etc' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Security_Resource_Lookup', @level2type=N'COLUMN',@level2name=N'Security_Resource_Item_ID'
