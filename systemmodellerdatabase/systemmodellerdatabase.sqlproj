@@ -173,5 +173,7 @@
     <Build Include="dbo\Stored Procedures\smapi_Select_Part_Group_Parts_by_group.sql" />
     <Build Include="dbo\Stored Procedures\smapi_Select_Part_parts_order_by_version.sql" />
     <Build Include="dbo\Stored Procedures\smapi_Select_Version_By_Part_Number.sql" />
+    <Build Include="dbo\Tables\Location_Datum.sql" />
+    <Build Include="dbo\Stored Procedures\smapi_Insert_Location_Postion_Part_location.sql" />
   </ItemGroup>
 </Project>
