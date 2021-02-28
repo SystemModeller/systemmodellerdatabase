@@ -2,5 +2,20 @@
 	[Site_ID] [int] IDENTITY(1,1) NOT NULL,
 	[Site_Name] [nvarchar](50) NOT NULL,
 	[Site_Grid_Ref] [nvarchar](50) NULL,
-	[Site_Location_ID] [int] NULL
+	[Site_Location_ID] [int] NULL,
+	[Site_X_Ref_MM] [int] NULL,
+	[Site_Y_Ref_MM] [int] NULL,
+	[Site_Z_Ref_MM] [int] NULL,
+	[Site_Display_U_Ref] [int] NULL,
+	[Site_Display_V_Ref] [int] NULL,
+	[Site_Display_W_Ref] [int] NULL,
+	[Site_Display_X_Ref] [int] NULL,
+	[Site_Display_Y_Ref] [int] NULL,
+	[Site_Display_Z_Ref] [int] NULL,
+	[Site_Lattitude] [decimal](18, 0) NULL,
+	[Site_Longitude] [decimal](18, 0) NULL,
+	[Site_UTM_Part_1] [nchar](10) NULL,
+	[Site_UTM_Part_2] [nchar](10) NULL,
+	[Site_UTM_Part_3] [nchar](10) NULL,
+	[Site_Active] [bit] NOT NULL
 ) ON [PRIMARY]

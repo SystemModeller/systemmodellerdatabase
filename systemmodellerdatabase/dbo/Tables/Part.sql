@@ -37,6 +37,9 @@ GO
 
 
 GO
+
+
+GO
 ALTER TABLE [dbo].[Part] ADD  CONSTRAINT [DF_Part_Part_Condition]  DEFAULT ((0)) FOR [Part_Condition]
 GO
 ALTER TABLE [dbo].[Part] ADD  CONSTRAINT [DF_Part_Part_Discontinued]  DEFAULT ((0)) FOR [Part_Discontinued]
